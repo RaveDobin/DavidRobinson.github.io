@@ -3,41 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>3D Portfolio with Three.js</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>David Robinson</h1>
-        <p>Tech and Sales</p>
-    </header>
-    <main>
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am david</p>
-        </section>
-        
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>big super cool project that gets me job here.</p>
-        </section>
-        
-        <!-- Resume Section -->
-        <section id="resume">
-            <h2>Resume</h2>
-            <p>Link to download your resume or a brief summary.</p>
-        </section>
-        
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>© 2024 David Robinson</p>
-    </footer>
+    <!-- Container for the Three.js canvas -->
+    <div id="canvas-container"></div>
+
+    <!-- Import Three.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Import GLTFLoader from Three.js examples -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+
+    <!-- Link to the main JavaScript file where we’ll set up Three.js and load the model -->
+    <script src="main.js"></script>
+
+    <!-- Link to the orbital -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+<script>
+  var firebaseConfig = {
+  apiKey: "AIzaSyDW8oVJghAfC-NOX9AcEqVADq8T_rk_CoY",
+  authDomain: "portfolio-ec84b.firebaseapp.com",
+  databaseURL: "https://portfolio-ec84b-default-rtdb.firebaseio.com",
+  projectId: "portfolio-ec84b",
+  storageBucket: "portfolio-ec84b.firebasestorage.app",
+  messagingSenderId: "790244836547",
+  appId: "1:790244836547:web:1c01eec51fcf814faace76"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+
 </body>
 </html>
