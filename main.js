@@ -36,3 +36,24 @@ function animate() {
     renderer.render(scene, camera);
 }
 animate();
+
+// Set up the Three.js renderer
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+// Set up CSS2DRenderer for floating text
+const labelRenderer = new THREE.CSS2DRenderer();
+labelRenderer.setSize(window.innerWidth, window.innerHeight);
+labelRenderer.style.position = 'absolute';
+labelRenderer.style.top = '0';
+document.body.appendChild(labelRenderer.domElement);
+
+// Create the floating text
+const textDiv = document.createElement('div');
+textDiv.className = 'label';
+textDiv.textContent = 'Your Floating Text';
+textDiv.style.color = 'white';
+const textLabel = new THREE.CSS2DObject(textDiv);
+textLabel.position.set(0, 1, 0);  // Position the label above the model
+my-model.add(textLabel);               // Attach label to the cube
