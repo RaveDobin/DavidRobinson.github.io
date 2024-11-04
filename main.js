@@ -52,7 +52,7 @@ document.body.appendChild(labelRenderer.domElement);
 // Create the floating text
 const textDiv = document.createElement('div');
 textDiv.className = 'label';
-textDiv.textContent = 'Your Floating Text';
+textDiv.textContent = 'sterling outa this world';
 textDiv.style.color = 'white';
 const textLabel = new THREE.CSS2DObject(textDiv);
 textLabel.position.set(0, 1, 0);  // Position the label above the model
