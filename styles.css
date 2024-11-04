@@ -26,3 +26,10 @@ footer {
     padding: 10px;
     background-color: #f0f0f0;
 }
+.label {
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    border-radius: 5px;
+}
